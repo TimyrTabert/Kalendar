@@ -4,12 +4,19 @@
 
 **
 @Override
+
     protected void onCreate(Bundle savedInstanceState) {
+    
         super.onCreate(savedInstanceState);
+        
         setContentView(R.layout.activity_main);
+        
         ListView listView = findViewById(R.id.listView);
+        
         listView.setAdapter(
+        
                 new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, titles));
+                
         listView.setTextFilterEnabled(true);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
